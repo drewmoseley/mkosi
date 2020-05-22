@@ -5414,7 +5414,7 @@ def run_qemu(args: CommandLineArguments) -> None:
     else:
         die("Couldn't find OVMF UEFI firmware blob.")
 
-    cmdline += ["-smp", "2", "-m", "1024"]
+    cmdline += ["-smp", "2", "-m", "4096"]
 
     if "uefi" in args.boot_protocols:
         cmdline += ["-drive", f"if=pflash,format=raw,readonly,file={firmware}"]
